@@ -27,10 +27,17 @@ include = ["LICENSE", "bindings/rust/*",
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter-language = "0.1"
+tree-sitter-language = { git = "https://github.com/kossnocorp/tree-sitter", branch = "wasm-all" }
 
 [build-dependencies]
 cc = "1.2"
 
 [dev-dependencies]
-tree-sitter = "0.25.8"
+tree-sitter = { git = "https://github.com/kossnocorp/tree-sitter", branch = "wasm-all" }
+
+# [patch."https://github.com/kossnocorp/tree-sitter"]
+# tree-sitter = { path = "../tree-sitter/lib" }
+# tree-sitter-language = { path = "../tree-sitter/crates/language" }
+
+# [patch."https://github.com/kossnocorp/tree-sitter-go"]
+# tree-sitter-go = { path = "../tree-sitter-go" }
